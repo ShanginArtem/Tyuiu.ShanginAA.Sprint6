@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             groupBoxTask_SAA = new GroupBox();
             TextBoxCondition_SAA = new TextBox();
             GroupBoxInput_SAA = new GroupBox();
@@ -69,7 +68,6 @@
             TextBoxCondition_SAA.ReadOnly = true;
             TextBoxCondition_SAA.Size = new Size(493, 246);
             TextBoxCondition_SAA.TabIndex = 0;
-            TextBoxCondition_SAA.Text = resources.GetString("TextBoxCondition_SAA.Text");
             TextBoxCondition_SAA.TextChanged += TextBoxCondition_SAA_TextChanged;
             // 
             // GroupBoxInput_SAA
@@ -138,6 +136,7 @@
             // 
             TextBoxOutputResult_SAA.BackColor = SystemColors.ButtonFace;
             TextBoxOutputResult_SAA.BorderStyle = BorderStyle.None;
+            TextBoxOutputResult_SAA.Font = new Font("Consolas", 10F);
             TextBoxOutputResult_SAA.Location = new Point(6, 44);
             TextBoxOutputResult_SAA.Multiline = true;
             TextBoxOutputResult_SAA.Name = "TextBoxOutputResult_SAA";
@@ -182,7 +181,7 @@
             ButtonLaunch_SAA.UseVisualStyleBackColor = false;
             ButtonLaunch_SAA.Click += ButtonLaunch_SAA_Click;
             // 
-            // FormMain_SAA
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -192,7 +191,7 @@
             Controls.Add(GroupBoxOutput_SAA);
             Controls.Add(GroupBoxInput_SAA);
             Controls.Add(groupBoxTask_SAA);
-            Name = "FormMain_SAA";
+            Name = "FormMain";
             Text = "Спринт 6 | Таск 1 | Вариант 15 | Шангин А.А.";
             groupBoxTask_SAA.ResumeLayout(false);
             groupBoxTask_SAA.PerformLayout();

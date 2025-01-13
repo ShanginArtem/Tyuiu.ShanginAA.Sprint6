@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             groupBoxCon_SAA = new GroupBox();
-            textBoxCon_SAA = new TextBox();
             dataGridViewMatrix_SAA = new DataGridView();
+            textBoxCon_SAA = new TextBox();
             groupBoxResult_SAA = new GroupBox();
             dataGridViewRes_SAA = new DataGridView();
             buttonHelp_SAA = new Button();
@@ -52,6 +52,15 @@
             groupBoxCon_SAA.TabStop = false;
             groupBoxCon_SAA.Text = "Условие";
             // 
+            // dataGridViewMatrix_SAA
+            // 
+            dataGridViewMatrix_SAA.BackgroundColor = SystemColors.Info;
+            dataGridViewMatrix_SAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewMatrix_SAA.Location = new Point(210, 22);
+            dataGridViewMatrix_SAA.Name = "dataGridViewMatrix_SAA";
+            dataGridViewMatrix_SAA.Size = new Size(158, 150);
+            dataGridViewMatrix_SAA.TabIndex = 1;
+            // 
             // textBoxCon_SAA
             // 
             textBoxCon_SAA.BackColor = SystemColors.ButtonFace;
@@ -62,21 +71,12 @@
             textBoxCon_SAA.TabIndex = 0;
             textBoxCon_SAA.Text = "Дана матрица 5 на 5\r\n-7     34  -2    25  5\r\n-16 -12   30  -3   17\r\n  3  -15    30  -3   17\r\n 17   22  -3    32 -11\r\n  9    28   1    -9  -2\r\nВыполнить сортировку по возрастанию во втором столбце.\r\n";
             // 
-            // dataGridViewMatrix_SAA
-            // 
-            dataGridViewMatrix_SAA.BackgroundColor = SystemColors.Info;
-            dataGridViewMatrix_SAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewMatrix_SAA.Location = new Point(210, 22);
-            dataGridViewMatrix_SAA.Name = "dataGridViewMatrix_SAA";
-            dataGridViewMatrix_SAA.Size = new Size(158, 150);
-            dataGridViewMatrix_SAA.TabIndex = 1;
-            // 
             // groupBoxResult_SAA
             // 
             groupBoxResult_SAA.Controls.Add(dataGridViewRes_SAA);
             groupBoxResult_SAA.Location = new Point(395, 4);
             groupBoxResult_SAA.Name = "groupBoxResult_SAA";
-            groupBoxResult_SAA.Size = new Size(174, 205);
+            groupBoxResult_SAA.Size = new Size(318, 264);
             groupBoxResult_SAA.TabIndex = 1;
             groupBoxResult_SAA.TabStop = false;
             groupBoxResult_SAA.Text = "Вывод";
@@ -87,7 +87,7 @@
             dataGridViewRes_SAA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewRes_SAA.Location = new Point(6, 22);
             dataGridViewRes_SAA.Name = "dataGridViewRes_SAA";
-            dataGridViewRes_SAA.Size = new Size(162, 150);
+            dataGridViewRes_SAA.Size = new Size(306, 236);
             dataGridViewRes_SAA.TabIndex = 0;
             // 
             // buttonHelp_SAA
@@ -98,7 +98,7 @@
             buttonHelp_SAA.TabIndex = 2;
             buttonHelp_SAA.Text = "?";
             buttonHelp_SAA.UseVisualStyleBackColor = true;
-            buttonHelp_SAA.Click += new System.EventHandler(this.buttonHelp_SAA_Click);
+            buttonHelp_SAA.Click += buttonHelp_SAA_Click;
             // 
             // buttonDone_SAA
             // 
@@ -108,12 +108,13 @@
             buttonDone_SAA.TabIndex = 3;
             buttonDone_SAA.Text = "Выполнить";
             buttonDone_SAA.UseVisualStyleBackColor = true;
+            buttonDone_SAA.Click += buttonDone_SAA_Click;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(577, 309);
+            ClientSize = new Size(748, 396);
             Controls.Add(buttonDone_SAA);
             Controls.Add(buttonHelp_SAA);
             Controls.Add(groupBoxResult_SAA);

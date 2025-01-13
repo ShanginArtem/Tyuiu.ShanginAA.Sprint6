@@ -144,7 +144,6 @@
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 3;
             textBox1.KeyPress += textBox1_KeyPress;
-            //textBox1.TextChanged += textBox1_TextChanged_KeyPress;
             // 
             // groupBoxTask_SAA
             // 

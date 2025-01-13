@@ -18,6 +18,11 @@ namespace Tyuiu.ShanginAA.Sprint6.Task6.V26.Lib
 
                     resStr += temp[^1] + " ";
                 }
+
+                if (resStr.Length > 0)
+                {
+                    resStr = resStr.TrimEnd();
+                }
                 return resStr;
             }
         }

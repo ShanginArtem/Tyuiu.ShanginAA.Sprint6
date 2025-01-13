@@ -48,5 +48,15 @@ namespace Tyuiu.ShanginAA.Sprint6.Task6.V26
             string str = "";
             textBoxResult.Text = ds.CollectTextFromFile(openFilePath);
         }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Task 6 Выполнил студент ИСПб-24-1 Шангин Артём Александрович", "Сообщение");
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }

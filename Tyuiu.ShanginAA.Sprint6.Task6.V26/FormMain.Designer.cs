@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             openFileDialogTask = new OpenFileDialog();
             toolTip1 = new ToolTip(components);
             buttonOpenFile = new Button();
@@ -38,9 +39,14 @@
             groupBoxPutData = new GroupBox();
             groupBoxOutPutData = new GroupBox();
             textBoxResult = new TextBox();
+            buttonHelp = new Button();
             groupBoxPutData.SuspendLayout();
             groupBoxOutPutData.SuspendLayout();
             SuspendLayout();
+            // 
+            // toolTip1
+            // 
+            toolTip1.Popup += toolTip1_Popup;
             // 
             // buttonOpenFile
             // 
@@ -48,7 +54,8 @@
             buttonOpenFile.Name = "buttonOpenFile";
             buttonOpenFile.Size = new Size(170, 56);
             buttonOpenFile.TabIndex = 0;
-            buttonOpenFile.Text = "открыть файл";
+            buttonOpenFile.Text = "Открыть файл";
+            toolTip1.SetToolTip(buttonOpenFile, "Выберите нужный файл для обработки");
             buttonOpenFile.UseVisualStyleBackColor = true;
             buttonOpenFile.Click += buttonOpenFile_Click;
             // 
@@ -70,7 +77,7 @@
             textBoxInPutData.ReadOnly = true;
             textBoxInPutData.Size = new Size(776, 71);
             textBoxInPutData.TabIndex = 3;
-            textBoxInPutData.Text = "Дан файл";
+            textBoxInPutData.Text = resources.GetString("textBoxInPutData.Text");
             // 
             // textBoxStart
             // 
@@ -114,11 +121,22 @@
             textBoxResult.TabIndex = 5;
             textBoxResult.TextChanged += textBox4_TextChanged;
             // 
+            // buttonHelp
+            // 
+            buttonHelp.Location = new Point(724, 12);
+            buttonHelp.Name = "buttonHelp";
+            buttonHelp.Size = new Size(58, 56);
+            buttonHelp.TabIndex = 9;
+            buttonHelp.Text = "?";
+            buttonHelp.UseVisualStyleBackColor = true;
+            buttonHelp.Click += buttonHelp_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonHelp);
             Controls.Add(groupBoxOutPutData);
             Controls.Add(groupBoxPutData);
             Controls.Add(textBoxInPutData);
@@ -146,5 +164,6 @@
         private GroupBox groupBoxPutData;
         private GroupBox groupBoxOutPutData;
         private TextBox textBoxResult;
+        private Button buttonHelp;
     }
 }
